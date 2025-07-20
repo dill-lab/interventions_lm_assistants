@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Designing and Validating Intervention Opportunities for
+        content="Supporting the Design of Intervention Opportunities for
         Suicide Prevention with Language Model Assistants">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Designing and Validating Intervention Opportunities for
+  <title>Supporting the Design of Intervention Opportunities for
     Suicide Prevention with Language Model Assistants</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -60,7 +60,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Designing and Validating Intervention Opportunities for
+          <h1 class="title is-1 publication-title">Supporting the Design of Intervention Opportunities for
             Suicide Prevention with Language Model Assistants</h1>
           <div class="is-size-4 publication-authors">
             <span class="author-block">
@@ -108,7 +108,7 @@
                   <span>Paper (Coming Soon!)</span>
                 </a>
               </span>
-              <!-- <span class="link-block">
+              <span class="link-block">
                 <a href="https://github.com/dill-lab/interventions_lm_assistants"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -116,7 +116,7 @@
                   </span>
                   <span>Code</span>
                   </a>
-              </span> -->
+              </span>
               <!-- Dataset Link. -->
               <!-- <span class="link-block">
               <a href="https://huggingface.co/collections/dill-lab/oath-frames-66750459b31a31445bd1d67a"
@@ -144,28 +144,15 @@
       <div class="column is-four-fifths">
         <!-- <h2 class="title is-3">Snapshot of</span> <span style="font-size:30px; font-family:Garmond; color: #000000;"><b><tt>OATH-Frames</tt></b></span></h2> -->
         <div class="content has-text-justified">
-          The National Violent Death Reporting System (NVDRS) collects informa-
-          tion including free text narratives (e.g., circumstances surrounding a sui-
-          cide) about violent deaths (e.g., suicides) in the United States. In a demand-
-          ing public health data pipeline, annotators manually extract structured
-          information from NVDRS narratives following extensive guidelines devel-
-          oped painstakingly by experts, all of which is aimed to inform prevention.
-          To facilitate data-driven insights from this pipeline and support the devel-
-          opment of novel suicide interventions, we investigate the effectiveness of
-          language models (LMs) as efficient assistants to (a) data annotators and
-          (b) experts. For data annotators, we find that LM assistants are able to
-          predict the existing annotations about 85% of the time across 50 NVDRS
-          variables. Furthermore, in a subset of cases where an LM disagrees with
-          the annotation, further expert review finds that LM assistants can surface
-          annotation discrepancies between free text narratives and structured data
-          38% of the time. For experts, we introduce an algorithm that efficiently
-          refines guidelines for new variables by allowing experts to focus only on
-          providing feedback for incorrect LM predictions. We apply our algorithm to
-          a real-world case study for a new variable that characterizes victim interac-
-          tions with lawyers and demonstrate that it achieves comparable annotation
-          quality with a laborious manual approach. Our findings provide evidence
-          that LMs can serve as effective assistants to public health researchers who
-          handle sensitive data in high-stakes scenarios.
+The National Violent Death Reporting System (NVDRS) documents information about suicides in the United States, including free text narratives (e.g., circumstances surrounding a suicide).
+In a demanding public health data pipeline, annotators manually extract structured information from death investigation records
+following extensive guidelines developed painstakingly by experts.
+In this work, we facilitate data-driven insights from the NVDRS data to support the development of novel suicide interventions by investigating the value of language models (LMs) as efficient assistants to these (a) data annotators and (b) experts. 
+We find that LM predictions match existing data annotations about 85\% of the time across 50 NVDRS variables. 
+In the cases where the LM disagrees with existing annotations, expert review reveals that LM assistants can surface annotation discrepancies 38\% of the time. 
+Finally, we introduce a human-in-the-loop algorithm to assist experts in efficiently building and refining guidelines for annotating new variables by allowing them to focus only on providing feedback for incorrect LM predictions. 
+We apply our algorithm to a real-world case study for a new variable that characterizes victim interactions with lawyers and demonstrate that it achieves comparable annotation quality with a laborious manual approach. 
+Our findings provide evidence that LMs can serve as effective assistants to public health researchers who handle sensitive data in high-stakes scenarios. 
           
           
 </div>
@@ -179,15 +166,11 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="./static/images/pitch.png" alt="pitch">
-      <figcaption>We employ LM assistants to reduce the mental burden of annotating NVDRS
-        narratives when a codebook is available (top) and to help experts develop codebooks for new
-        variables where one is not available (bottom). When a codebook is available for a variable,
-        we instruct an LM to leverage it to generate a reasoning and identify the relevant span of
-        text before predicting the label. For a new variable of interest for which a codebook is not
-        available, we explore both a manual approach and an LM-assisted codebook development
-        algorithm to develop one. With the latter, experts can efficiently develop a codebook by
-        solely focusing on providing feedback for incorrect LM predictions without forsaking
-        annotation quality </figcaption>
+      <figcaption>  LM assistants can reduce the emotional burden of annotating NVDRS narratives when a codebook is available (top) and help experts efficiently develop new codebooks for novel variables (bottom). 
+  When a codebook is available for a variable, we incorporate it in the LM instruction for Chain-of-Thought predictions. 
+  For a new variable of interest without an existing codebook, we propose an efficient, LM-assisted expert codebook development algorithm.
+  Here experts focus on providing feedback for incorrect LM predictions, reducing manual codebook development time from weeks to hours (bottom right). 
+  For the annotation of a novel variable: victim interactions with legal professionals, we find that our algorithm results in similar annotation quality to a fully manual approach. </figcaption>
     </div>
   </div>
 </section>
